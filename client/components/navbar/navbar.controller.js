@@ -2,10 +2,16 @@
 
 angular.module('loggerApp')
   .controller('NavbarCtrl', function ($scope, $location) {
-    $scope.menu = [{
+    $scope.menu = [
+      {
       'title': 'Home',
-      'link': '/'
-    }];
+      'link': '/Main'
+      },
+      {
+        'title': 'About',
+        'link': '/About'
+      }
+    ];
 
     $scope.isCollapsed = true;
 
