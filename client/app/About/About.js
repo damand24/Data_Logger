@@ -8,3 +8,5 @@ angular.module('loggerApp')
         controller: 'AboutCtrl'
       });
   });
+
+

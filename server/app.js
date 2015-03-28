@@ -21,7 +21,6 @@ var io = require('socket.io').listen(server);
 // Start server
 server.listen(config.port, config.ip, function () {
   console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
-  console.log("Server listening on port " + config.port + "$ IP " + config.ip );
 });
 
 // Expose app

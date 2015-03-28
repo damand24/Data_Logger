@@ -1,5 +1,5 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-<div class="container" id="main-container">
+<div class="container" id="main-container" ng-controller="LoginCtrl">
   <ul class="nav nav-tabs">
   <li class="active"><a href="#login">Login</a></li>
   <li><a href="#create" data-toggle="tab">Create Account</a></li>
@@ -12,12 +12,13 @@
         <input type="text" class="img-rounded" placeholder="Username/Email">
         <input type="PASSWORD" class="img-rounded" placeholder="Password">
         <label class="checkbox" class="img-rounded" value="remember-me">
-          <input type="checkbox" class="img-rounded" value="remember-me"> Remember me
+          <input type="checkbox" ng-model="message" class="img-rounded" value="remember-me"> Remember me
         </label>
 
         <div class="signin-form-btn button-container">
-          <button class="btn mce-btn-large, btn-primary" type="submit" id="login-btn">Login</button>
-          <!--<button class="btn mce-btn-large, btn-primary" type="submit">Save</button>-->
+          <button ng-click="login_click()" class="btn mce-btn-large, btn-primary" type="submit" id="login-btn">Login
+          </button>
+          <!--<button class="btn mce-btn-large btn-primary" type="submit">Save</button>-->
         </div>
         <a ng-href="/About">Forgot Username or Password</a>
       </form>
@@ -43,77 +44,3 @@
   </div>
 
 </div>
-
-<!--</div> &lt;!&ndash; /container &ndash;&gt;-->
-<!--<link class="cssdeck" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css">-->
-<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" class="cssdeck">-->
-
-<!--<div class="" id="loginModal">-->
-  <!--&lt;!&ndash;<div class="modal-header">&ndash;&gt;-->
-    <!--&lt;!&ndash;<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>&ndash;&gt;-->
-  <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-  <!--<div>-->
-    <!--<div class="well-lg">-->
-      <!--<ul class="nav nav-tabs">-->
-        <!--<li class="active"><a href="#login">Login</a></li>-->
-        <!--<li><a href="#create" data-toggle="tab">Create Account</a></li>-->
-      <!--</ul>-->
-      <!--<div id="myTabContent" class="tab-content">-->
-        <!--<div class="tab-pane active" id="login">-->
-          <!--<form class="form-horizontal" action='/' method="get">-->
-            <!--<fieldset>-->
-              <!--<div id="legend">-->
-                <!--<legend class="">Login</legend>-->
-              <!--</div>-->
-              <!--<div class="control-group">-->
-                <!--&lt;!&ndash; Username &ndash;&gt;-->
-                <!--<label class="control-label"  for="username">Username</label>-->
-                <!--<div class="controls">-->
-                  <!--<input type="text" id="username" name="username" placeholder="" class="input-xlarge img-rounded">-->
-                <!--</div>-->
-              <!--</div>-->
-
-              <!--<div class="control-group">-->
-                <!--&lt;!&ndash; Password&ndash;&gt;-->
-                <!--<label class="control-label" for="password">Password</label>-->
-                <!--<div class="controls">-->
-                  <!--<input type="password" id="password" name="password" placeholder="" class="input-xlarge img-rounded">-->
-                <!--</div>-->
-              <!--</div>-->
-
-
-              <!--<div class="control-group">-->
-                <!--&lt;!&ndash; Button &ndash;&gt;-->
-                <!--<div class="controls">-->
-                  <!--<button class="btn btn-success" type="submit">Login</button>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</fieldset>-->
-          <!--</form>-->
-        <!--</div>-->
-        <!--<div class="tab-pane" id="create">-->
-          <!--<form id="tab">-->
-            <!--<label>Username</label>-->
-            <!--<input type="text" value="" class="input-xlarge img-rounded">-->
-            <!--<label>First Name</label>-->
-            <!--<input type="text" value="" class="input-xlarge img-rounded">-->
-            <!--<label>Last Name</label>-->
-            <!--<input type="text" value="" class="input-xlarge img-rounded">-->
-            <!--<label>Email</label>-->
-            <!--<input type="text" value="" class="input-xlarge img-rounded">-->
-            <!--<label>Address</label>-->
-						<!--<textarea value="Smith" rows="3" class="input-xlarge img-rounded">-->
-						<!--</textarea>-->
-
-            <!--<div>-->
-              <!--<button class="btn btn-primary">Create Account</button>-->
-            <!--</div>-->
-          <!--</form>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
-  <!--<script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-  <!--<script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>-->

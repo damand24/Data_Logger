@@ -1,4 +1,11 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-  <div class="col-md-12">
-    This is the About view.
+<div ng-controller="AboutCtrl">
+  <div>
+    <h1 id="header1"><b>{{message}}</b></h1>
+    <button ng-click="cclick()" class="btn mce-btn-large" id="about-btn">Click Me</button>
   </div>
+  <div aboutdir></div>
+</div>
+
+
+<!--<script src="../about_1/about_1.directive.js"></script>-->
